@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+#main {
+    width: 100%;
+    /* height: 100%; */
+    min-height: 100vh;
+    /* position: relative; */
+}
+
+#top {
+    width: 100%;
+    min-height: 60vh;
+    /* background-color: red; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* object-fit: cover; */
+    background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* position: absolute; */
+    /* filter: brightness(50%); */
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.245);
+    width: 100%;
+    min-height: inherit;
+    position: relative;
+}
+
+#text {
+    display: flex;
+    bottom: 20%;
+    position: absolute;
+    width: 100%;
+    padding: 0 10vw;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+
+#text h1 {
+    font-size: 13vh;
+    color: white;
+    font-weight: 400x;
+    text-shadow: 2px 2px #FF0000;
+}
+
+#textright {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+#textright i {
+    font-size: 2rem;
+}
+
+#textright p {
+    justify-content: space-between;
+    width: 40%;
+}
+
+#icon{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    font-size: 34px;
+    transition: transform 1.3s ease; 
+ 
+}
+
+
+#icon i:hover{
+   color: aqua;
+    transform: scale(1.2);
+}
+
+
+#bottom {
+    /* background-color: aqua; */
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+}
+
+#bottom-child1 {
+    background-color: white;
+    width: 25%;
+    min-height: inherit;
+    /* color: white; */
+    padding: 30px;
+}
+
+#bottom-child1 p {
+    font-size: 15px;
+    margin-top: 1rem;
+}
+
+#bottom-child2 {
+    background-image: url(https://images.pexels.com/photos/1484771/pexels-photo-1484771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: cover;
+    width: 25%;
+    min-height: inherit;
+}
+
+#bottom-child3 {
+    /* background-color: yellow; */
+    width: 20%;
+    min-height: inherit;
+}
+
+#bottom3-top {
+    background-color: red;
+    width: 100%;
+    min-height: 20vh;
+    color: white;
+    padding: 30px;
+ 
+}
+
+#bottom3-top p {
+    font-size: large;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+#bottom3-bottom {
+    background-image: url(https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhcnxlbnwwfDF8MHx8fDA%3D);
+    background-position: center;
+    background-size: cover;
+    min-height: inherit;
+    width: 100%;
+}
+
+
+#bottom-child4 {
+    background-color: #1F1F1F;
+    width: 30%;
+    min-height: inherit;
+    color: white;
+    padding: 30px;
+}
+
+.notif {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.notif #photo {
+    width: 40px;
+    height: 40px;
+    /* background-color: red; */
+ 
+    border-radius: 50rem;
+}
+.notif img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+
+.notif p {
+    width: 80%;
+}
+
+/* responsive */
+
+@media (max-width:500px) {
+    #overlay #text {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #text{
+        bottom: 2%;
+    }
+
+    #text h1 {
+        font-size: 12vw;
+    }
+
+    #overlay #text #textright {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #overlay #text #textright p {
+        width: initial;
+        margin-top: 5px;
+    }
+
+    #overlay #text #textright i {
+        margin-top: 22px;
+    }
+
+    #bottom {
+        flex-direction: column;
+
+    }
+
+    #bottom-child1 {
+        width: 100vh;
+    }
+
+    #bottom-child2 {
+        width: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-direction: column;
+    }
+
+    #bottom-child3 {
+        width: 100vh;
+    }
+
+    #bottom-child4 {
+        width: 100vh;
+        height: fit-content;
+    }
+}
